@@ -35,5 +35,5 @@ a deterministic path.
 
 
 ## License 
-"Bayesian Context Aggregation for Neural Processes" is open-sourced under the APGL-3.0 license. See the [LICENSE](LICENSE) file for details.
+"Bayesian Context Aggregation for Neural Processes" is open-sourced under the AGPL-3.0 license. See the [LICENSE](LICENSE) file for details.
 
