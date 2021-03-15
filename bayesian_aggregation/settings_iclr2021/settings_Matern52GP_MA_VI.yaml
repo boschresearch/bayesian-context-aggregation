@@ -1,0 +1,53 @@
+aggregator_kwargs:
+  d_lo: 22
+  d_z: 22
+  f_act: tanh
+  init_data:
+  - 1.0
+  - 0
+  mlp_layers:
+  - 22
+  seed: 1234
+aggregator_type: MeanAggregatorRtoZ
+d_x: 1
+d_y: 1
+d_z: 22
+decoder_kwargs:
+  arch: separate_networks
+  d_x: 1
+  d_y: 1
+  d_z: 22
+  f_act: tanh
+  mlp_layers_mu_y:
+  - 212
+  - 15
+  mlp_layers_std_y:
+  - 71
+  seed: 1234
+decoder_type: DecoderNetworkSamples
+encoder_kwargs:
+  d_lo: 22
+  d_x: 1
+  d_y: 1
+  f_act: tanh
+  mlp_layers:
+  - 100
+  - 100
+  - 99
+  seed: 1234
+encoder_type: EncoderNetworkMA
+seed: 1234
+training:
+  adam_lr: 0.00287581
+  batch_size: 16
+  device: cuda
+  loss_kwargs:
+    n_marg: 10
+  loss_type: VI
+  n_context_meta_max: 50
+  n_context_meta_min: 3
+  n_context_val_max: 50
+  n_context_val_min: 0
+  save_interval: 100
+  seed: 1234
+  validation_interval: 10

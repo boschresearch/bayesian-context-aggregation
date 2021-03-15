@@ -1,0 +1,53 @@
+aggregator_kwargs:
+  d_z: 128
+  init_data:
+  - 0.0
+  - 1.0
+aggregator_type: BayesianAggregator
+d_x: 1
+d_y: 1
+d_z: 128
+decoder_kwargs:
+  arch: separate_networks
+  d_x: 1
+  d_y: 1
+  d_z: 128
+  f_act: tanh
+  mlp_layers_mu_y:
+  - 160
+  - 113
+  - 65
+  mlp_layers_std_y:
+  - 39
+  seed: 1234
+decoder_type: DecoderNetworkSamples
+encoder_kwargs:
+  arch: separate_networks
+  d_lo: 128
+  d_x: 1
+  d_y: 1
+  f_act: tanh
+  mlp_layers_cov_r:
+  - 144
+  - 101
+  - 57
+  mlp_layers_r:
+  - 120
+  - 25
+  seed: 1234
+encoder_type: EncoderNetworkBA
+seed: 1234
+training:
+  adam_lr: 0.000278722
+  batch_size: 16
+  device: cuda
+  loss_kwargs:
+    n_marg: 10
+  loss_type: MC
+  n_context_meta_max: 50
+  n_context_meta_min: 3
+  n_context_val_max: 50
+  n_context_val_min: 0
+  save_interval: 100
+  seed: 1234
+  validation_interval: 10
